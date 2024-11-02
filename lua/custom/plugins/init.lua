@@ -2,4 +2,17 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
-return {}
+return {
+  {
+    'mhanberg/output-panel.nvim',
+    event = 'VeryLazy',
+    config = function()
+      require('output_panel').setup()
+    end,
+  },
+  {
+    'tpope/vim-surround',
+    event = 'VeryLazy',
+    dependencies = { 'tpope/vim-repeat' },
+  },
+}
